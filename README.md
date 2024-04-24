@@ -18,7 +18,9 @@
             <p>A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
             <a href="https://kaptarbudapest.hu/aktualitasok/blog/munka-kozben-felfedezni-a-vilagot/" id="tovabb">TOVÁBB</a>
             
-        </div>
+      
+  </div>
+    </div>
     </div>
     <div id="kartya">
         <img width="100%" src="masodik.png"id="kep1" alt="minecraft">
@@ -27,7 +29,7 @@
             <h2>MONDAY MOMENTUM ▶️ HÉTFŐNKÉNT</h2>
             <p>A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
             <a href="https://kaptarbudapest.hu/aktualitasok/esemenyek/monday-momentum-%e2%96%b6%ef%b8%8f-hetfonkent/" id="tovabb">JELENTKEZEM</a>
-            
+             </div>
         </div>
     </div>
     <div id="kartya">
@@ -37,9 +39,8 @@
       <h2>PRIVÁT IRODA A BELVÁROSBAN!</h2>
             <p>A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
             <a href="https://kaptarbudapest.hu/aktualitasok/ajanlatok/privat-iroda-a-belvarosban/" id="tovabb">TOVÁBB</a>
-            
+             </div>
         </div>
-    </div>
-  </div>
+  
 </body>
 </html>
