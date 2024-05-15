@@ -9,7 +9,14 @@
 </head>
 <body>
   <div id="gradient"></div> 
-  
+
+  <div class="toast" id="toast">
+    <button class="close-btn" onclick="closeToast()">x</button>
+    <img src="toast.jpg" alt="Toast ikon">
+    <p>Kmetz Dominik vagyok, a gépészetibe járok.</p>
+    <p>Szeretek fényképezni és képeket szerkeszteni.</p>
+    <p>És ezek itt a munkáim.</p>
+  </div>
  
     <div class="hamburger" onclick="toggleMenu()">
       <div class="bar"></div>
@@ -66,7 +73,11 @@
       var menu = document.getElementById("navMenu");
       menu.classList.toggle("show-menu");
     }
-    
+    function closeToast() {
+  var toast = document.getElementById('toast');
+  toast.style.display = 'none';
+}
+
   </script>
 </body>
 </html>
