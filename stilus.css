@@ -261,45 +261,6 @@ h2 {
     font-size: 15px;
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 999;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: 0.4s;
-}
-
-.show-menu ul {
-    display: flex;
-    flex-direction: column;
-}
-
-.show-menu ul li {
-    opacity: 1;
-}
-
-@media screen and (max-width: 768px) {
-    .hamburger {
-      display: block;
-    }
-  
-    #navMenu ul {
-      display: none;
-    }
-  
-    .show-menu ul {
-      display: block;
-    }
-}
 .toast {
     position: fixed;
     top: 50%;
