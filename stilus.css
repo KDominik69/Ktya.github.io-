@@ -133,9 +133,9 @@ body, html {
     transition: background-color 0.3s ease; 
 }
 
-/* Gomb stílus sötét módhoz */
+
 .dark-mode #sotetModGomb {
-    background-color: #000000; 
+    background-color: #0000002d; 
     color: #FFFFFF;
 }
 
