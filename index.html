@@ -9,20 +9,22 @@
 </head>
 <body>
   <div id="gradient"></div> 
-  <div class="hamburger" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <nav id="navMenu">
-    <ul>
-      <li> <a href='#sec1' id="a2">About</a> </li>
-      <li> <a href='#sec2' id="a2">Skills</a> </li>
-      <li> <a href='#sec3' id="a2">Experience</a> </li>
-      <li> <a href='#sec4' id="a2">Education</a> </li>
-      <li> <a href='#sec5' id="a2">Portfolio</a> </li>
-    </ul>
-  </nav>
+  
+ 
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav id="navMenu">
+      <ul>
+        <li> <a href='#sec1' id="a2">About</a> </li>
+        <li> <a href='#sec2' id="a2">Skills</a> </li>
+        <li> <a href='#sec3' id="a2">Experience</a> </li>
+        <li> <a href='#sec4' id="a2">Education</a> </li>
+        <li> <a href='#sec5' id="a2">Portfolio</a> </li>
+      </ul>
+    </nav>
   <div id="kozep">
     <div id="kartya">
         <img width="100%" src="1.jpg" id="kep" alt="minecraft">
@@ -56,7 +58,15 @@
   <button id="sotetModGomb" onclick="toggleSotetMod()">Sötét mód</button>
 
   <script  >
-  function toggleMenu() {
+    function toggleSotetMod() {
+      var body = document.body; // a body elemet kiválasztjuk
+      body.classList.toggle("dark-mode"); // a dark-mode osztályt hozzáadjuk vagy eltávolítjuk a body elemhez
+    }
+    function toggleMenu() {
+      var menu = document.getElementById("navMenu");
+      menu.classList.toggle("show-menu");
+    }
+    function toggleMenu() {
       var menu = document.getElementById("navMenu");
       menu.classList.toggle("show-menu");
     }
