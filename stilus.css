@@ -10,7 +10,9 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.445);
     width: 20%;
     margin-right: 2%; 
+    
 }
+
 
 #kartya-szoveg {
     padding-left: 15px;
@@ -107,7 +109,7 @@ body, html {
 .dark-mode #kartya {
     background-color: #222; 
     color: #fff; 
-    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.445); 
+    box-shadow: 0px 0px 22px 9px rgba(255, 255, 255, 0.445); 
 }
 
 .dark-mode h3 {
@@ -125,25 +127,29 @@ body, html {
 }
 
 #sotetModGomb {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.445);
+    box-shadow: 0px 0px 22px 9px rgba(0, 0, 0, 0.445);
     background-color: #ffffff30;
     color: #000000; 
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease; 
+    border-radius: 5px;
 }
 
 
 
 .dark-mode #sotetModGomb {
-     box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.445); 
+    box-shadow: 0px 0px 22px 9px rgba(255, 255, 255, 0.445); 
     background-color:  #4a4a4a56; 
     color: #FFFFFF;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease; 
+
+    border-radius: 5px;
+   
 }
 
 section{
@@ -271,7 +277,8 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #ff0015, 0px 0px 0px 8px #0000008f, 0px 0px 0px 16px #4b4c4be9, 0px 0px 0px 24px #828482c9, 0px 0px 0px 31px #b2b5b27a, 0px 0px 0px 39px #daddda61, -50px -50px 0px -30px rgba(69,255,216,0); 
+    box-shadow: inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #ff0015, 0px 0px 0px 8px #00000091, 0px 0px 0px 16px #4b4c4bbf, 0px 0px 0px 24px #82848286, 0px 0px 0px 31px #b2b5b24e, 0px 0px 0px 39px #daddda26, -50px -50px 0px -30px rgba(69,255,216,0);
   }
   
   .toast img {
