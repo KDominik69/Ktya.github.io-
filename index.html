@@ -18,11 +18,6 @@
     <p>És ezek itt a munkáim.</p>
   </div>
  
-    <div class="hamburger" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
     <nav id="navMenu">
       <ul>
         <li> <a href='#sec1' id="a2">About</a> </li>
@@ -66,13 +61,10 @@
 
   <script  >
     function toggleSotetMod() {
-      var body = document.body; // a body elemet kiválasztjuk
-      body.classList.toggle("dark-mode"); // a dark-mode osztályt hozzáadjuk vagy eltávolítjuk a body elemhez
+      var body = document.body;
+      body.classList.toggle("dark-mode"); 
     }
-    function toggleMenu() {
-      var menu = document.getElementById("navMenu");
-      menu.classList.toggle("show-menu");
-    }
+    
     function closeToast() {
   var toast = document.getElementById('toast');
   toast.style.display = 'none';
