@@ -125,6 +125,7 @@ body, html {
 }
 
 #sotetModGomb {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.445);
     background-color: #ffffff30;
     color: #000000; 
     border: none;
@@ -134,9 +135,15 @@ body, html {
 }
 
 
+
 .dark-mode #sotetModGomb {
-    background-color: #0000002d; 
+     box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.445); 
+    background-color:  #4a4a4a56; 
     color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
 }
 
 section{
