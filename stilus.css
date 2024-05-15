@@ -1,4 +1,3 @@
-
 #kozep {
     display: flex;
     justify-content: center;
@@ -232,4 +231,65 @@ nav ul li:hover:after{
 }
 #a3{
     color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    #kozep {
+      flex-direction: column;
+      align-items: center;
+    }
+    #kartya {
+      width: 80%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.show-menu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.show-menu ul li {
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    #navMenu ul {
+      display: none;
+    }
+  
+    .show-menu ul {
+      display: block;
+    }
 }
