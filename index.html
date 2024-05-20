@@ -27,49 +27,48 @@
         <li> <a href='#sec5' id="a2">Portfolio</a> </li>
       </ul>
     </nav>
-  <div id="kozep">
-    <div id="kartya">
+  <div id="kozep" class="card-container">
+    <div id="kartya" class="card">
         <img width="100%" src="1.jpg" id="kep" alt="minecraft">
-        <div id="kartya-szoveg">
+        <div id="kartya-szoveg" class="card-content">
             <h3> BEMUTATKOZÁS </h3>
             <h2>Bemutatkozásom!</h2>
-            <p>A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
-            <a href="https://sites.google.com/view/ita-kdj10b/bemutatkoz%C3%A1s?authuser=0" id="tovabb">TOVÁBB</a>
+            <p id="p2">A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
+            <a href="https://sites.google.com/view/ita-kdj10b/bemutatkoz%C3%A1s?authuser=0" id="tovabb" class="card-link">TOVÁBB</a>
         </div>
     </div>
-    <div id="kartya">
+    <div id="kartya" class="card">
         <img width="100%" src="2.png"id="kep1" alt="minecraft">
-        <div id="kartya-szoveg">
+        <div id="kartya-szoveg" class="card-content">
             <h3>PROJEKT</h3>
             <h2>Projekt munkáim!</h2>
-            <p>A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
-            <a href="https://sites.google.com/view/ita-kdj10b/projekt?authuser=0" id="tovabb">TOVÁBB</a>
+            <p id="p2">A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
+            <a href="https://sites.google.com/view/ita-kdj10b/projekt?authuser=0" id="tovabb" class="card-link">TOVÁBB</a>
         </div>
     </div>
-    <div id="kartya">
+    <div id="kartya" class="card">
         <img width="100%" src="3.jpg"id="kep" alt="minecraft">
-        <div id="kartya-szoveg">
+        <div id="kartya-szoveg" class="card-content">
             <h3>PYTHON</h3>
             <h2>Python munkáim!</h2>
-            <p>A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
-            <a href="https://sites.google.com/view/ita-kdj10b/python?authuser=0" id="tovabb">TOVÁBB</a>
+            <p id="p2">A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
+            <a href="https://sites.google.com/view/ita-kdj10b/python?authuser=0" id="tovabb" class="card-link">TOVÁBB</a>
         </div>
     </div>
   </div>
 
   <button id="sotetModGomb" onclick="toggleSotetMod()">Sötét mód</button>
 
-  <script  >
+  <script>
     function toggleSotetMod() {
       var body = document.body;
       body.classList.toggle("dark-mode"); 
     }
     
     function closeToast() {
-  var toast = document.getElementById('toast');
-  toast.style.display = 'none';
-}
-
+      var toast = document.getElementById('toast');
+      toast.style.display = 'none';
+    }
   </script>
 </body>
 </html>
