@@ -1,3 +1,9 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: larger;
+}
 #p2{
     padding-bottom: 25px;
     
@@ -28,7 +34,7 @@
 }
 
 h3 {
-    font-size: small;
+    font-size: 25px;
     padding-left: 5px;
     padding-right: 5px;
     background-color: rgb(255, 242, 0);
@@ -37,11 +43,11 @@ h3 {
 }
 
 h2 {
-    font-size: large;
+    font-size: 35px;
 }
 
 #tovabb {
-    font-size: small;
+    font-size: 20px;
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 5px;
@@ -67,11 +73,7 @@ a {
     width: 100%;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
+
 
 #gradient {
     position: fixed;
@@ -263,9 +265,6 @@ img {
     height: auto;
 }
 
-h2 {
-    font-size: 15px;
-}
 
 .toast {
     position: fixed;
