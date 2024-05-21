@@ -7,6 +7,7 @@ body, html {
 
 #p2{
     padding-bottom: 25px;
+    padding-top: 10px;
     
 }
 #kozep {
@@ -32,6 +33,7 @@ body, html {
     padding-left: 15px;
     padding-right: 35px;
     padding-bottom: 5px;
+   
 }
 
 h3 {
@@ -299,4 +301,142 @@ img {
     position: absolute;
     top: 10px;
     right: 10px;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.chat-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.chat-header button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.chat-log {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+.chat-log p {
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+.user-message {
+    background-color: #e1ffc7;
+    align-self: flex-end;
+}
+.bot-message {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+.chat-input {
+    display: flex;
+}
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom-left-radius: 10px;
+}
+.chat-input button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #de0909;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ab1207;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.he {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.he:hover {
+    background-color: #e2e2e2;
+}
+
+
+.parallax {
+    background-image: url('1691088034203.jpg'); /* Cseréld ki a saját képedre */
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    height: 500px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content h1 {
+    margin-top: 0;
 }
