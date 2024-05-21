@@ -56,6 +56,28 @@
         </div>
     </div>
   </div>
+  <br>
+  <div class="parallax"></div>
+  <div class="parallax"></div>
+  <div class="container">
+    <h1>To Do List</h1>
+    <input type="text" id="taskInput" placeholder="Írj be egy tennivalót">
+    <button onclick="addTask()">Adj hozzá</button>
+    <ul id="taskList">
+        <li id="he">Tennivalók</li>
+    </ul>
+</div>
+
+  <div class="chat-container" id="chat-container">
+    <div class="chat-header">
+        <button onclick="closeChat()">X</button>
+    </div>
+    <div class="chat-log" id="chat-log"></div>
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Írj ide hogy hello">
+        <button onclick="sendMessage()">Küldés</button>
+    </div>
+</div>
 
   <button id="sotetModGomb" onclick="toggleSotetMod()">Sötét mód</button>
 
@@ -69,6 +91,67 @@
       var toast = document.getElementById('toast');
       toast.style.display = 'none';
     }
+    function sendMessage() {
+        const userInput = document.getElementById('user-input').value;
+        if (userInput.trim() === '') return;
+
+        const chatLog = document.getElementById('chat-log');
+
+        const userMessage = document.createElement('p');
+        userMessage.textContent = userInput;
+        userMessage.className = 'user-message';
+        chatLog.appendChild(userMessage);
+
+        const botMessage = document.createElement('p');
+        botMessage.textContent = getBotResponse(userInput);
+        botMessage.className = 'bot-message';
+        chatLog.appendChild(botMessage);
+
+        chatLog.scrollTop = chatLog.scrollHeight;
+
+        
+        document.getElementById('user-input').value = '';
+    }
+
+    function getBotResponse(input) {
+       
+        const responses = {
+            'hello': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved, ki ki készítet,viszlát',
+            'hogy vagy?': 'Jól vagyok, köszönöm! És te?',
+            'jól':'Na annak örülök :)',
+            'nem jól':'Oh sajnálattal hallom',
+            'mi a neved?': 'Én egy egyszerű chatbot vagyok.',
+            'ki ki készítet':'Kmetz Dominik János',
+            'viszlát': 'Viszlát! Szép napot!'
+        };
+
+       
+        const normalizedInput = input.toLowerCase();
+        return responses[normalizedInput] || 'Elnézést, nem értem a kérdést.';
+    }
+
+    function closeChat() {
+        const chatContainer = document.getElementById('chat-container');
+        chatContainer.style.display = 'none';
+    }
+   
+    function addTask() {
+    var taskInput = document.getElementById("taskInput");
+    var taskList = document.getElementById("taskList");
+    
+    if (taskInput.value === "") {
+        alert("Please enter a task!");
+        return;
+    }
+
+    var li = document.createElement("li");
+    li.textContent = taskInput.value;
+    taskList.appendChild(li);
+    
+    taskInput.value = "";
+}
+
+    
   </script>
 </body>
 </html>
