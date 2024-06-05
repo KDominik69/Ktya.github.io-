@@ -200,6 +200,14 @@ a {
     background-color: rgba(22, 22, 22, 0.8);
     color: #fff;
 }
+.dark-mode .parallax {
+    background-image: url('nght.jpeg'); 
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 section {
     background-color: white;
     height: 100vh;
@@ -381,6 +389,7 @@ img {
     border-top-right-radius: 10px;
 }
 .chat-header button {
+  
     background: none;
     border: none;
     font-size: 16px;
