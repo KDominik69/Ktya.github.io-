@@ -5,59 +5,743 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kártyák</title>
+  <title>Projekt portdólió</title>
+  <style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: larger;
+    font-family: Arial, sans-serif;
+}
+
+#p2{
+    padding-bottom: 25px;
+    padding-top: 10px;
+   
+    
+}
+#kozep {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#kartya {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 120px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+
+    width: 20%; 
+    margin-right: 2%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#kartya {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 120px;
+    background-color: transparent; 
+    font-family: Arial, sans-serif;
+   
+    width: 20%; 
+    margin-right: 2%;
+   
+    padding-bottom: 20px;
+}
+
+
+#kartya-szoveg {
+    padding-left: 15px;
+    padding-right: 35px;
+    padding-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+
+h3 {
+    font-size: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgb(255, 242, 0);
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+#tovabb {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+#tovabb:hover {
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#kep, #kep1 {
+    width: 100%;
+}
+
+
+
+#gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.dark-mode #gradient {
+    background: linear-gradient(-45deg, #333333, #222222, #111111, #000000);
+}
+
+#sotetModGomb {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.dark-mode h3 {
+    background-color: rgb(64, 64, 64);
+    color: #fff;
+}
+
+.dark-mode #tovabb {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode #tovabb:hover {
+    background-color: #666;
+}
+.dark-mode a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+#sotetModGomb {
+    box-shadow: 0px 0px 22px 9px rgba(0, 0, 0, 0.445);
+    background-color: #ffffff30;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.dark-mode #sotetModGomb {
+    box-shadow: 0px 0px 22px 9px rgba(255, 255, 255, 0.445);
+    background-color: #4a4a4a56;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+.dark-mode .container{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0px 0px 22px 9px rgba(255, 255, 255, 0.445);
+}
+.dark-mode .chat-header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    background-color: #222222c7;
+    color: #fff;
+    box-shadow: 0px 0px 22px 9px rgba(255, 255, 255, 0.445);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.dark-mode .chat-container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(22, 22, 22, 0.8);
+    border: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+    
+    color: #000000;
+    border-radius: 10px;
+}
+.dark-mode input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #3d3d3d;
+    border-radius: 5px;
+    background-color: rgba(22, 22, 22, 0.8);
+    color: #fff;
+}
+.dark-mode .parallax {
+    background-image: url('nght.jpeg'); 
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(odd) {
+    background: #ccc;
+}
+
+section:before {
+    content: attr(data-text);
+    color: #262626;
+    font-size: 8em;
+    text-transform: bold;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    background-color: #28231D;
+    width: 100vw;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    box-shadow: 0 15px 40px #000;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul li:hover {
+    color: #000;
+}
+
+nav ul li:before,
+nav ul li:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(-45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .5s;
+}
+.dark-mode nav ul li:before,
+nav ul li:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(-45deg, rgba(156,113,131,1) 0%, rgba(161,0,0,1) 100%);
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .5s;
+}
+
+nav ul li:after {
+    z-index: -2;
+    filter: blur(20px);
+}
+
+nav ul li:hover:before,
+nav ul li:hover:after {
+    transform: scaleY(1);
+}
+
+#a2 {
+    color: aliceblue;
+}
+
+@media all and (max-width: 500px) {}
+
+#container {
+    margin-top: 30px;
+}
+
+::selection {
+    background-color: #9400D3;
+}
+
+#a3 {
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    #kozep {
+        flex-direction: column;
+        align-items: center;
+    }
+    #kartya {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.toast {
+    font-size: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-box-shadow: inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #ff0015, 0px 0px 0px 8px #0000008f, 0px 0px 0px 16px #4b4c4be9, 0px 0px 0px 24px #828482c9, 0px 0px 0px 31px #b2b5b27a, 0px 0px 0px 39px #daddda61, -50px -50px 0px -30px rgba(69,255,216,0);
+    box-shadow: inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #ff0015, 0px 0px 0px 8px #00000091, 0px 0px 0px 16px #4b4c4bbf, 0px 0px 0px 24px #82848286, 0px 0px 0px 31px #b2b5b24e, 0px 0px 0px 39px #daddda26, -50px -50px 0px -30px rgba(69,255,216,0);
+}
+.toast {
+  z-index: 9; 
+  position: center; 
+ 
+
+}
+
+
+.toast img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    background: none;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.chat-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.chat-header button {
+  
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.chat-log {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+.chat-log p {
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+.user-message {
+    background-color: #e1ffc7;
+    align-self: flex-end;
+}
+.bot-message {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+.chat-input {
+    display: flex;
+}
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom-left-radius: 10px;
+}
+.chat-input button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+.container {
+    padding-bottom: 50px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #de0909;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ab1207;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.he {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.he:hover {
+    background-color: #e2e2e2;
+}
+
+
+.parallax {
+    background-image: url('1691088034203.jpg'); 
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    height: 500px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content h1 {
+    margin-top: 0;
+}
+.profil{
+    border-radius: 5px;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px; 
+    height: 400px; 
+    perspective: 1000px;
+    margin: 100px; 
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+    padding: 20px; 
+}
+.flip-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent; 
+    font-family: Arial, sans-serif;
+    
+    width: 20%;  
+    margin-right: 2%; 
+    padding-bottom: 20px;
+    perspective: 1000px; 
+    height: 400px; 
+    
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+    padding: 20px; 
+}
+
+#msc{
+    color: white;
+}
+
+  </style>
 </head>
 <body>
   <div id="gradient"></div> 
 
   <div class="toast" id="toast">
     <button class="close-btn" onclick="closeToast()">x</button>
-    <img src="toast.jpg" alt="Toast ikon">
-    <p>Kmetz Dominik vagyok, a Gépészetibe járok.</p>
+    <img class="profil"src="toast.jpg" alt="Toast ikon">
+    <p>Kmetz Dominik vagyok, a</p>
+    <p><a  href="https://mateszalka-gepeszeti.www.intezmeny.edir.hu/"target="_blank" id="msc" >MSzC Gépészeti Technikum és Kollégium</a>-ba járok.</p>
     <p>Szeretek fényképezni és képeket szerkeszteni.</p>
-    <p>És ezek itt a munkáim.</p>
+    <p>És ezek itt a munkáim és elérhetőségeim.</p>
     
-    <button><a href="https://www.linkedin.com/in/dominik-kmetz-a91423257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkedn profil</a></button>
+    <button><a  href="https://www.linkedin.com/in/dominik-kmetz-a91423257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" >LinkedIn profil</a></button>
+    <button><a  href="https://www.canva.com/design/DAFwByxCp1g/uiihUq4iQR40eaJDXdK0-w/edit?utm_content=DAFwByxCp1g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">CV</a></button>
+    
   </div>
  
     <nav id="navMenu">
       <ul>
-        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1Pq0mHTr8kw3YHWWGTINmt_hGu0FC0_Xz/edit' id="a2">Ita</a> </li>
-        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1cWDyyGA-gsw4PRN5M7xTuNeYUQSOQD2c/edit' id="a2">Bemutatkozás</a> </li>
-        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1oGKGaGhLzukF1em1DgcPYNuF-1v8FaRq/edit' id="a2">Projekt</a> </li>
-        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1w-tjuWcK-koNHdq9JbkXM2vBW7uvZgJH/edit' id="a2">Python</a> </li>
-        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1SaxxdjOPEqbhy6AclAFmHTJc0yrzwmek/edit' id="a2">Digikult</a> </li>
+        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1Pq0mHTr8kw3YHWWGTINmt_hGu0FC0_Xz/edit' id="a2"target="_blank">Ita</a> </li>
+        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1cWDyyGA-gsw4PRN5M7xTuNeYUQSOQD2c/edit' id="a2" target="_blank">Bemutatkozás</a> </li>
+        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1oGKGaGhLzukF1em1DgcPYNuF-1v8FaRq/edit' id="a2" target="_blank">Projekt</a> </li>
+        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1w-tjuWcK-koNHdq9JbkXM2vBW7uvZgJH/edit' id="a2" target="_blank">Python</a> </li>
+        <li> <a href='https://sites.google.com/d/1ktEMgh-uW40EfbEk828xCkPG5Gyiiisu/p/1SaxxdjOPEqbhy6AclAFmHTJc0yrzwmek/edit' id="a2" target="_blank">Digikult</a> </li>
       </ul>
     </nav>
-  <div id="kozep" class="card-container">
-    <div id="kartya" class="card">
-        <img width="100%" src="1.jpg" id="kep" alt="minecraft">
-        <div id="kartya-szoveg" class="card-content">
-            <h3> BEMUTATKOZÁS </h3>
-            <h2>Bemutatkozásom!</h2>
-            <p id="p2">A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
-            <a href="https://sites.google.com/view/ita-kdj10b/bemutatkoz%C3%A1s?authuser=0" id="tovabb" class="card-link">TOVÁBB</a>
+    <div id="kozep" class="card-container">
+        <div id="kartya" class="card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img width="100%" src="1.jpg" id="kep" alt="asd">
+                </div>
+                <div class="flip-card-back card-content" id="kartya-szoveg">
+                    <h3>Filmajánló</h3>
+                    <h2>Iskolai WP feladat</h2>
+                    <p id="p2">Egy iskolai feladatt, melyet <a href="https://sites.google.com/view/ita-dr10b/projekt" target="_blank" class="black">Demeter Rolanddal</a> együtt dolgoztunk.</p>
+                    <a href="https://kdominik69.github.io/Filmajanlo.github.io-/" id="tovabb" class="card-link" target="_blank">TOVÁBB</a>
+
+                </div>
+            </div>
+        </div>
+        
+        <div id="kartya" class="card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img width="100%" src="2.png" id="kep1" alt="asd">
+                </div>
+                <div class="flip-card-back card-content" id="kartya-szoveg">
+                    <h3>Időjárás Előrejelző</h3>
+                    <h2>Iskolai WP feladat</h2>
+                    <p id="p2">Egy iskolai feladat, melyet <a href="https://sites.google.com/view/ita-dr10b/projekt" target="_blank">Demeter Rolanddal</a> együtt dolgoztunk.</p>
+                    <a href="https://kdominik69.github.io/Id-j-r-s-El-rejelz-_github.io-/" id="tovabb" target="_blank" class="card-link">TOVÁBB</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="kartya" class="card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img width="100%" src="3.jpg" id="kep" alt="asd">
+                </div>
+                <div class="flip-card-back card-content" id="kartya-szoveg">
+                    <h3>Tech4Study</h3>
+                    <h2>Iskolai IKTP feladat</h2>
+                    <p id="p2">Egy projektként indult az egyik osztálytársammal, <a href="https://sites.google.com/view/ita-sb10b/projekt" target="_blank">Simon Ádám Bencével</a>.</p>
+                    <a href="https://kdominik69.github.io/Tech4Study.github.io-/" id="tovabb"target="_blank" class="card-link">TOVÁBB</a>
+                </div>
+            </div>
+        </div>
+        <div id="kartya" class="card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img width="100%" src="4.png" id="kep" alt="asd">
+                </div>
+                <div class="flip-card-back card-content" id="kartya-szoveg">
+                    <h3>Bomberman clone</h3>
+                    <h2>Iskolai WP feladat</h2>
+                    <p id="p2">Egy osztály szintű projekt amelyben 3-man dolgoztunk a programozás részén  <a href="https://sites.google.com/view/ita-sb10b/projekt" target="_blank">Simon Ádám Bence</a> és  <a href="https://sites.google.com/view/ita-vzs-10b/pojekt" target="_blank">Veres Zsombor</a>-al.</p>
+                    <a href="https://kdominik69.github.io/bomberman.github.io-/" id="tovabb"target="_blank" class="card-link">TOVÁBB</a>
+                </div>
+            </div>
+        </div>
+        <div id="kartya" class="card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img width="100%" src="Készülő.png" id="kep" alt="asd">
+                </div>
+                <div class="flip-card-back card-content" id="kartya-szoveg">
+                    <h3>Készülő munka</h3>
+                    <h2>Iskolai WP feladat</h2>
+                    <p id="p2">Egy iskolai feladat, melyet önálóan kellet csinálni</p>
+                    <a href="" id="tovabb"target="_blank" class="card-link">TOVÁBB</a>
+                </div>
+            </div>
+        </div>
+        <div id="kartya" class="card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img width="100%" src="Készülő.png" id="kep" alt="asd">
+                </div>
+                <div class="flip-card-back card-content" id="kartya-szoveg">
+                    <h3>Készülő munka</h3>
+                    <h2>Iskolai feladat</h2>
+                    <p id="p2">Egy iskolai feladat, melyet...</p>
+                    <a href="" id="tovabb"target="_blank" class="card-link">TOVÁBB</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="kartya" class="card">
-        <img width="100%" src="2.png"id="kep1" alt="minecraft">
-        <div id="kartya-szoveg" class="card-content">
-            <h3>PROJEKT</h3>
-            <h2>Projekt munkáim!</h2>
-            <p id="p2">A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
-            <a href="https://sites.google.com/view/ita-kdj10b/projekt?authuser=0" id="tovabb" class="card-link">TOVÁBB</a>
-        </div>
-    </div>
-    <div id="kartya" class="card">
-        <img width="100%" src="3.jpg"id="kep" alt="minecraft">
-        <div id="kartya-szoveg" class="card-content">
-            <h3>PYTHON</h3>
-            <h2>Python munkáim!</h2>
-            <p id="p2">A digital nomád életstílus évek óta egyre népszerűbb, és ez</p>
-            <a href="https://sites.google.com/view/ita-kdj10b/python?authuser=0" id="tovabb" class="card-link">TOVÁBB</a>
-        </div>
-    </div>
-  </div>
+    
   <br>
   <div class="parallax"></div>
   <div class="parallax"></div>
@@ -72,7 +756,7 @@
 
   <div class="chat-container" id="chat-container">
     <div class="chat-header">
-        <button onclick="closeChat()">X</button>
+        Botika_1.0
     </div>
     <div class="chat-log" id="chat-log"></div>
     <div class="chat-input">
@@ -88,6 +772,8 @@
       var body = document.body;
       body.classList.toggle("dark-mode"); 
     }
+    
+
     
     function closeToast() {
       var toast = document.getElementById('toast');
@@ -118,12 +804,30 @@
     function getBotResponse(input) {
        
         const responses = {
-            'hello': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved?,ki készítet?,viszlát',
+            'hello': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved?,ki készített?,viszlát',
+            'Hello': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved?,ki készített?,viszlát',
+            'Szia': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved?,ki készített?,viszlát',
+            'szia': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved?,ki készített?,viszlát',
+            'Csa': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved?,ki készített?,viszlát',
+            'csa': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved?,ki készített?,viszlát',
+            'Szevasz': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved?,ki készített?,viszlát',
+            'szevasz': 'Szia! Itt vannak amikre tudok válaszolni: hogy vagy?, mi a neved?,ki készített?,viszlát',
             'hogy vagy?': 'Jól vagyok, köszönöm! És te?',
             'jól':'Na annak örülök :)',
+            'remekül':'Na annak örülök :)',
+            'nagyon jól':'Na annak örülök :)',
+            'Jól':'Na annak örülök :)',
+            'Remekül':'Na annak örülök :)',
+            'Nagyon jól':'Na annak örülök :)',
             'nem jól':'Oh sajnálattal hallom',
+            'szarul':'Oh sajnálattal hallom',
+            'én nem':'Oh sajnálattal hallom',
+            'Nem jól':'Oh sajnálattal hallom',
+            'Szarul':'Oh sajnálattal hallom',
+            'Én nem':'Oh sajnálattal hallom',
             'mi a neved?': 'Én egy egyszerű chatbot vagyok.',
             'ki készített?':'Kmetz Dominik János',
+            'az ki?':'A toast ablakban olvashatsz róla ha bezártad nyomj egy F5-öt és az oldal közepén lesz.',
             'viszlát': 'Viszlát! Szép napot!'
         };
 
